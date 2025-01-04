@@ -4,50 +4,106 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Terms of Service - CS2 Community</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --background-color: #1e1e1e;
+            --background-color: #0f0f0f;
             --text-color: #ffffff;
-            --muted-text: #a0aec0;
-            --accent: #ff4b2b;
+            --muted-text: #8899ac;
+            --accent: #FF2E63;
+            --gradient: linear-gradient(135deg, #FF2E63, #FF8E53);
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --blur: blur(10px);
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
             background-color: var(--background-color);
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.7;
             padding: 2rem;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            background-image: radial-gradient(circle at 50% 0%, rgba(255, 46, 99, 0.15), transparent 50%);
         }
 
         h1 {
-            color: var(--accent);
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
         }
 
         h2 {
             color: var(--accent);
-            margin-top: 2rem;
+            margin-top: 2.5rem;
+            font-size: 1.8rem;
+            font-weight: 600;
         }
 
         p {
-            margin: 1rem 0;
+            margin: 1.2rem 0;
+            font-size: 1.1rem;
+            color: var(--muted-text);
         }
 
         .section {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 1rem 0;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 1.5rem 0;
+            backdrop-filter: var(--blur);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
         }
 
         .highlight {
-            color: var(--accent);
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 1.2rem;
+        }
+
+        ul li {
+            color: var(--muted-text);
+            margin: 0.8rem 0;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "→";
+            color: var(--accent);
+            position: absolute;
+            left: -1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -103,9 +159,7 @@
     </div>
 
     <div class="section">
-        <p style="text-align: center; color: var(--muted-text);">Last updated: 2025</p>
+        <p style="text-align: center; color: var(--muted-text); font-size: 0.9rem;">Last updated: 2025</p>
     </div>
 </body>
 </html>
-
-
